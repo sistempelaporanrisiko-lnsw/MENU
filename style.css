@@ -1,0 +1,142 @@
+/* Jumbotron */
+.jumbotron {
+    font-family: montserrat;
+    background-image: url(img/lapor-2020.jpeg);
+    background-size: cover;
+    height: 710px;
+    text-align: center;
+    position: relative;
+}
+.jumbotron .row { 
+    margin-top: 100px;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,3), rgba(0,0,0,0.4));
+    position: absolute;
+    bottom: 0;
+}
+.jumbotron .col {
+    border-left: 6px solid green;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -3px;
+    top: 0;
+}
+
+.jumbotron .row h1 {
+    margin-right: 20px;
+    color: white;
+    height: auto;
+    width: 100%;
+    z-index: 2;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 350;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+.jumbotron .row h2 {
+    color: white;
+    margin-right: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.jumbotron .row h3 {
+    margin-right: 20px;
+    color: white;
+    height: auto;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 250;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.9);
+}
+
+/* Utility */
+.web .read{
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: transparent;
+    border: 2px solid;
+    padding: 9px 40px;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+.web .read span {
+    position: relative; 
+    z-index: 1;
+  }
+.web .read:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1450%;
+    width: 140%;
+    color: black;
+    background: linear-gradient(45deg, #e95f09 0%, #b90541 44%, #b90541 56%, #e95f09 100%);
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: linear-gradient(45deg, rgb(235, 100, 16) 0%, rgb(189, 15, 73) 44%, rgb(189, 15, 73) 56%, rgb(235, 100, 16) 100%);
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  
+.web .read:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+
+  @media (min-width: 992px) { 
+    .jumbotron .row { 
+        margin-top: 150px;
+    }
+    .jumbotron .row h1{
+        font-size: 3.5em;
+        margin-top: auto;
+        text-align: right;
+    }
+    .jumbotron .row h2{
+        font-size: 40px;
+        text-align: right;
+    }
+    .jumbotron .row h3{
+        text-align: right;
+        font-size: 1.5em;
+    }
+    .web .read:after{
+        height: 720%;
+    }
+
+
+
+
+}
